@@ -1,4 +1,4 @@
-const socket = io("wbsocket-production.up.railway.app");  // Use your deployed WebSocket URL
+const socket = io("https://wbsocket-production.up.railway.app");  // Use your deployed WebSocket URL
 
 socket.on("connect", () => {
     console.log("Connected to WebSocket Server:", socket.id);
@@ -9,5 +9,7 @@ document.getElementById("inputBox").addEventListener("input", (e) => {
 });
 
 socket.on("updateGame", (data) => {
+    console.log("Received update:", data.text); // Debugging
     document.getElementById("opponentText").innerText = data.text;
 });
+
