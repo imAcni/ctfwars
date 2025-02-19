@@ -15,6 +15,14 @@ socket.on("start-game", (data) => {
     document.getElementById("question").innerText = data.problem.question;
 
     const downloadLink = document.getElementById("download");
+    if (data.downloadboolean) {
+        downloadLink.innerHTML = "Download";
+    } else if (data.htmlboolean) {
+        downloadLink.inner = "Visit Site";
+    } else {
+        downloadLink.style.visibility = "hidden";
+    }
+
     downloadLink.download = data.download;
     downloadLink.href = data.fileUrl;
 });
