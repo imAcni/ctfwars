@@ -37,4 +37,5 @@ socket.on("game-over", (data) => {
 // Listen for incorrect answer feedback
 socket.on("incorrect-answer", (data) => {
     alert(data.message);
+    console.log("wrong answer")
 });
