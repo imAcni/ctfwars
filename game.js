@@ -22,7 +22,9 @@ socket.on("start-game", (data) => {
         downloadLink.href = data.fileUrl;
     } else if (data.htmlboolean) {
         downloadLink.innerHTML = "Visit Site";
-        downloadLink.href = data.fileUrl;
+        downloadLink.addEventListener("click", () => {
+            window.open(data.fileUrl, "_blank")
+        });
     } else {
         downloadLink.style.visibility = "hidden";
     }
