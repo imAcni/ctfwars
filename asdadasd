@@ -1,0 +1,70 @@
+<div class="inner">
+    <h1 style="text-align:center">CTFwar</h1>
+
+    <!-- You and Opponent Labels -->
+    <div style="display: flex; justify-content: space-between; width: 60%; margin: auto;">
+        <span>You</span>
+        <span>Opponent</span>
+    </div>
+
+    <!-- Flex container to hold both the challenge box and the text box -->
+    <div style="display: flex; justify-content: center; width: 60%; margin: auto; gap: 20px;">
+        
+        <!-- Challenge Box -->
+        <div style="width: 30%; border: 2px solid black; padding: 10px;">
+            <p style="margin-top: 10%; text-align:center">CHALLENGE:</p>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <span style="margin-top: 10%;text-align:center">Waiting for Player...</span>
+                <span style="margin-top: -20%; text-align: center;">
+                    Baldjasoidjasoidjaiodjasoidja<br>
+                    asdasDASD<br>
+                    adas<br>
+                    dasdasdasdasda<br>
+                    adasdas
+                </span>
+                <a href="#" class="button icon solid fa-download">Download file</a>
+            </div>
+        </div>
+
+        <!-- New Text Box -->
+        <div style="width: 30%; border: 2px solid black; padding: 10px; display: flex; align-items: center; justify-content: center;">
+            <textarea name="opponent-message" placeholder="Type here..." rows="5" style="width: 100%; height: 100%;"></textarea>
+        </div>
+
+    </div>
+
+    <!-- Input Box for Flag Submission -->
+    <div style="margin-top: 20px; text-align: center;">
+        <textarea name="demo-message" id="demo-message" placeholder="war{your_flag_here}" rows="1" style="width:50%; height: 40px;"></textarea>
+    </div>
+</div>
+
+<div class="inner">
+							<h1 style="text-align:center">CTFwar</h1>
+							<div style="display: flex; justify-content: space-between; width: 60%; margin: auto;">
+								<span>You</span>
+								<span>Opponent</span>
+							</div>
+							<div style="width: 30%; height: 70%; border: 2px solid black; padding: 10px;margin: auto">
+								<p style="margin-top: 10%;text-align:center">CHALLENGE:</p>
+								<div style="display: flex; flex-direction: column; align-items: center; margin: auto;">
+									<span style="margin-top: 10%;text-align:center">Waiting for Player...</span>
+									<span style="margin-top: -20%; text-align: center;">
+										Baldjasoidjasoidjaiodjasoidja<br>
+										asdasDASD<br>
+										adas<br>
+										dasdasdasdasda<br>
+										adasdas
+									</span>
+									<a href="#" class="button icon solid fa-download">Download file</a>
+								</div>
+							
+							</div>
+							<div>
+								<textarea name="demo-message" id="demo-message" placeholder="war{your_flag_here}" rows="1" style="width:50%;margin:auto;height:80%"></textarea>
+							</div>
+							
+							
+							
+
+						</div>
