@@ -32,11 +32,44 @@
 				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<h1 class="major">Play</h1>
-
-							<a id="playButton" class="button">Play</a>
-
+							<h1 style="text-align:center">CTFwar</h1>
+						
+							<!-- You and Opponent Labels -->
+							<div style="display: flex; justify-content: space-between; width: 60%; margin: auto;">
+								<span>You</span>
+								<span>Opponent <p>Link: <a id="gameLink" href="#">Game Link</a></p></span> 
+							</div>
+						
+							<!-- Flex container to hold both the challenge box and the text box -->
+							<div style="display: flex; justify-content: center; width: 100%; margin: auto; ">
+								
+								<!-- Challenge Box -->
+								<div style="width: 100%; padding: 10px;margin: auto;">
+									<div style="width:30%; padding:10px;margin:auto;border:2px solid black">
+									<p style="margin-top: 5%; text-align:center">CHALLENGE:</p>
+									<div style="display: flex; flex-direction: column; align-items: center;">
+										<span style="margin-top: 10%;text-align:center">Waiting for Player...</span>
+										<span style="margin-top: -20%; text-align: center;">
+											Baldjasoidjasoidjaiodjasoidja<br>
+											asdasDASD<br>
+											adas<br>
+											dasdasdasdasda<br>
+											adasdas
+										</span>
+										<a href="#" class="button icon solid fa-download">Download file</a>
+									</div>
+									</div>
+								</div>
+						
+						
+							</div>
+						
+							<!-- Input Box for Flag Submission -->
+							<div style="margin-top: 20px; text-align: center;">
+								<textarea name="demo-message" id="demo-message" placeholder="war{your_flag_here}" rows="1" style="width:30%;margin:auto "></textarea>
+							</div>
 						</div>
+						
 					</section>
 
 			</div>
@@ -59,7 +92,7 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
-			<script src="script.js"></script>
+			<script src="game.js"></script>
 
 	</body>
 </html>
