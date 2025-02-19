@@ -32,7 +32,9 @@ document.getElementById("submit").addEventListener("click", () => {
 // Listen for game-over event
 socket.on("game-over", (data) => {
     alert(`${data.message} Game Over!`);
-    window.location.href = "/play.html"
+    setTimeout(() => {
+        window.location.href = "/play.html";
+    }, 10000);
     // Optionally, redirect to a results page or reset the game
 });
 
