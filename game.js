@@ -1,5 +1,7 @@
 document.getElementById("waiting").style.visibility = "visible";
 document.getElementById("question").style.visibility = "hidden";
+const homebutton = document.getElementById("homebutton")
+homebutton.style.visibility = "hidden";
 const socket = io("https://wbsocket-production.up.railway.app");
 const params = new URLSearchParams(window.location.search);
 const lobbyId = params.get("lobbyId");
@@ -17,14 +19,15 @@ socket.on("start-game", (data) => {
     const downloadLink = document.getElementById("download");
     if (data.downloadboolean) {
         downloadLink.innerHTML = "Download";
+        downloadLink.download = data.download;
+        downloadLink.href = data.fileUrl;
     } else if (data.htmlboolean) {
-        downloadLink.inner = "Visit Site";
+        downloadLink.innerHTML = "Visit Site";
+        downloadLink.href = data.fileUrl;
     } else {
         downloadLink.style.visibility = "hidden";
     }
 
-    downloadLink.download = data.download;
-    downloadLink.href = data.fileUrl;
 });
 document.getElementById("submit").addEventListener("click", () => {
     const answer = document.getElementById("answerInput").value; // Get answer input
@@ -40,9 +43,11 @@ document.getElementById("submit").addEventListener("click", () => {
 // Listen for game-over event
 socket.on("game-over", (data) => {
     alert(`${data.message} Game Over!`);
-    setTimeout(() => {
+
+    homebutton.style.visibility = "visible";
+    homebutton.addEventListener("click", () => {
         window.location.href = "/play.html";
-    }, 10000);
+    })
     // Optionally, redirect to a results page or reset the game
 });
 
