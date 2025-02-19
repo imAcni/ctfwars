@@ -10,7 +10,6 @@ socket.emit("join-lobby", lobbyId);
 
 socket.on("start-game", (data) => {
     alert("Game Started!");
-    console.log("Received problem:", data.problem);
     console.log("File URL:", data.fileUrl);
     document.getElementById("waiting").style.visibility = "hidden";
     document.getElementById("question").style.visibility = "visible";
@@ -49,6 +48,15 @@ socket.on("game-over", (data) => {
         window.location.href = "/play.html";
     })
     // Optionally, redirect to a results page or reset the game
+});
+
+socket.on("disconnected", (data) => {
+    console.log(data.message);
+    alert("Opponent disconnected!");
+    homebutton.style.visibility = "visible";
+    homebutton.addEventListener("click", () => {
+        window.location.href = "/play.html";
+    })
 });
 
 // Listen for incorrect answer feedback
