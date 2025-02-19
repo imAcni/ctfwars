@@ -15,8 +15,8 @@ socket.on("start-game", (data) => {
     document.getElementById("question").innerText = data.problem.question;
 
     const downloadLink = document.getElementById("download");
-    downloadLink.download = data.fileUrl;
-    downloadLink.download = data.fileUrl;
+    downloadLink.download = data.download;
+    downloadLink.href = data.fileUrl;
 });
 document.getElementById("submit").addEventListener("click", () => {
     const answer = document.getElementById("answerInput").value; // Get answer input
